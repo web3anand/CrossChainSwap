@@ -1,6 +1,10 @@
 // src/App.jsx
-import React, { useState, useEffect } from 'react'
-import { LiFiWidget } from '@lifi/widget'
+import React, { useState, useEffect } from "react";
+import { LiFiWidget } from "@lifi/widget";
+import LandingPage from "./LandingPage"; // Import LandingPage component
+
+
+
 
 // Swap mode configuration
 const swapConfig = {
@@ -80,6 +84,8 @@ function App() {
   const toggleMode = () => {
     setMode((prev) => (prev === "swap" ? "refuel" : "swap"));
   };
+
+  
 
   const currentConfig = mode === "swap" ? swapConfig : refuelConfig;
 
