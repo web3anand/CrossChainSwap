@@ -45,6 +45,8 @@ h1 {
   font-size: 4em;
   line-height: 1.1;
   border-radius:10px ;
+  color: linear-gradient(to right, #eae1e27c, #ba1849b9)
+
 }
 
 p {
@@ -104,8 +106,28 @@ button:focus-visible {
   background: #ad4d4dcc;
 }
 
-/* Progress bar animation */
-.progress-bar {
+
+
+/* Special styles ONLY for Landing Page */
+body.landing-page-body {
+  background: linear-gradient(to right, #cf1a32, #f6f7f8bb);
+  transition: background 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+}
+
+/* Progress Bar for Landing Page */
+body.landing-page-body .progress-bar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+body.landing-page-body .progress-bar {
   position: absolute;
   top: 0;
   left: 0;
