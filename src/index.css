@@ -92,8 +92,8 @@ button:focus-visible {
   }
 }
 
-/* Background progression bar effect */
-.progress-bar-background {
+/* Progress bar container */
+.progress-bar-container {
   position: fixed;
   top: 0;
   left: 0;
@@ -101,9 +101,10 @@ button:focus-visible {
   height: 100%;
   z-index: -1;
   overflow: hidden;
-  background: rgba(144, 67, 67, 0.8);
+  background: #ad4d4dcc;
 }
 
+/* Progress bar animation */
 .progress-bar {
   position: absolute;
   top: 0;
