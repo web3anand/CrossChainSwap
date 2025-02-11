@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #e03b64;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -44,6 +44,19 @@ body {
 h1 {
   font-size: 4em;
   line-height: 1.1;
+  border-radius:10px ;
+}
+
+p {
+  color: #e7edef;
+  font-size: 2em;
+}
+
+strong{
+  color: rgb(36, 35, 33);
+  background-color: #dce5ed;
+  border-radius: 5px;
+  padding: 0.1em ;
 }
 
 button {
@@ -51,18 +64,19 @@ button {
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
+  color: #e03b64;
   font-weight: 500;
   font-family: inherit;
-  background-color: #351d1d;
+  background-color: #f4f6f9;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #881e1e;
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 8px auto -webkit-focus-ring-color;
 }
 
 @media (prefers-color-scheme: light) {
@@ -75,5 +89,36 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+/* Background progression bar effect */
+.progress-bar-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  background: rgba(144, 67, 67, 0.8);
+}
+
+.progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #4a90e2, #50e3c2);
+  animation: progressBarMove 4s linear infinite;
+}
+
+@keyframes progressBarMove {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
   }
 }

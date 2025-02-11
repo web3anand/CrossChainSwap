@@ -37,7 +37,7 @@ const refuelConfig = {
     },
     shape: { borderRadius: 16, borderRadiusSecondary: 16, borderRadiusTertiary: 24 },
     typography: { fontFamily: "Lexend, serif" },
-    container: { boxShadow: "0px 8px 32px rgba(0, 0, 0, 0.12)", borderRadius: "16px" },
+    container: { boxShadow: "0px 8px 32px rgba(231, 218, 218, 0.72)", borderRadius: "16px" },
     components: { MuiCard: { defaultProps: { variant: "elevation" } } }
   }
 };
@@ -66,7 +66,7 @@ function InteractiveBackground() {
     height: '100%',
     zIndex: -1,
     // The gradient centers on the mouse pointer position.
-    background: `radial-gradient(circle at ${coords.x}px ${coords.y}px, rgba(255, 255, 255, 0.96), rgba(224, 59, 100, 0.77) 70%)`,
+    background: `radial-gradient(circle at ${coords.x}px ${coords.y}px, rgba(255, 255, 255, 0.96), #e03b64 70%)`,
     transition: 'background 0.1s ease-out'
   };
 
