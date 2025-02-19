@@ -1,6 +1,5 @@
-// src/widgetpage.jsx
-import React, { useState, useEffect } from 'react'
-import { LiFiWidget } from '@lifi/widget'
+import React, { useState, useEffect } from 'react';
+import { LiFiWidget } from '@lifi/widget';
 
 // Swap mode configuration
 const swapConfig = {
@@ -17,7 +16,7 @@ const swapConfig = {
     },
     shape: { borderRadiusSecondary: 50, borderRadius: 10 },
     typography: { fontFamily: "Lexend, serif" },
-    container: { boxShadow: "0px 8px 32px rgba(0, 0, 0, 0.12)", borderRadius: "20px" },
+    container: { boxShadow: "0px 8px 32px rgba(228, 215, 215, 0.92)", borderRadius: "10px" },
     components: { MuiCard: { defaultProps: { variant: "elevation" } } }
   }
 };
@@ -37,7 +36,7 @@ const refuelConfig = {
     },
     shape: { borderRadius: 16, borderRadiusSecondary: 16, borderRadiusTertiary: 24 },
     typography: { fontFamily: "Lexend, serif" },
-    container: { boxShadow: "0px 8px 32px rgba(231, 218, 218, 0.72)", borderRadius: "16px" },
+    container: { boxShadow: "0px 8px 32px rgba(234, 225, 225, 0.72)", borderRadius: "10px" },
     components: { MuiCard: { defaultProps: { variant: "elevation" } } }
   }
 };
@@ -64,13 +63,27 @@ function InteractiveBackground() {
     left: 0,
     width: '100%',
     height: '100%',
-    zIndex: -1,
-    // The gradient centers on the mouse pointer position.
-    background: `radial-gradient(circle at ${coords.x}px ${coords.y}px, rgba(255, 255, 255, 0.96), #e03b64 70%)`,
-    transition: 'background 0.1s ease-out'
+    zIndex: -2,
+    background: `radial-gradient(circle at ${coords.x}px ${coords.y}px,rgba(255, 255, 255, 0.9),rgba(255, 255, 255, 0.49) 50%)`
   };
 
-  return <div style={backgroundStyle} />;
+  const glassOverlayStyle = {
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    backdropFilter: 'blur(10px)',
+    background: 'rgba(255, 255, 255, 0.1)',
+    zIndex: -1
+  };
+
+  return (
+    <>
+      <div style={backgroundStyle} />
+      <div style={glassOverlayStyle} />
+    </>
+  );
 }
 
 function App() {
@@ -98,8 +111,8 @@ function App() {
             fontFamily: "Lexend, serif",
             border: 'none',
             borderRadius: '10px',
-            backgroundColor: '#f7557c',
-            color: '#fff',
+            backgroundColor: 'rgba(255, 255, 255, 0.81)',
+            color: 'rgba(0, 0, 0, 0.81)',
             cursor: 'pointer'
           }}
         >
