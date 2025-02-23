@@ -34,9 +34,9 @@ export default function LandingPage() {
           </div>
         <div className="headerlink">
           <ul>
-            <li>Home</li>
+            <li onClick={() => navigate("/")}>Home</li>
             <li>Documentation</li>
-            <li>Bridge</li>
+            <li onClick={() => navigate("/widget")}>Bridge</li>
             <li>Buy</li>
             <li>Scan</li>
             <li>News</li>
