@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { LiFiWidget } from '@lifi/widget';
-import Threads from '../components/ui/elements/threads';
 
 // Swap mode configuration
 const swapConfig = {

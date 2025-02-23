@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { Button } from "../components/ui/button";
-import Threads from "../components/ui/elements/threads";
+import Threads from "../components/ui/elements/Threads";
 import GradientText from "../components/ui/elements/GradientText";
 import "../index.css"; 
 
