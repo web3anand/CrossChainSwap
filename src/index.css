@@ -1,3 +1,4 @@
+
 :root {
   font-family: "Lexend", serif;
   line-height: 1.5;
@@ -5,14 +6,12 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #a46c7a;
+  background-color: #000000;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  
+  -moz-osx-font-smoothing: grayscale; 
 }
 
 
@@ -20,7 +19,6 @@
 *:focus {
   outline: none !important;
 }
-
 
 
 a {
@@ -50,7 +48,7 @@ h1 {
 }
 
 p {
-  color: #02161d;
+  color: #000000;
   font-size: 2em;
 }
 
@@ -61,7 +59,7 @@ strong{
   padding: 0.1em ;
 }
 
-button {
+.linkbutton {
   border-radius: 5px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -89,83 +87,98 @@ button:focus-visible {
   a:hover {
     color: #747bff;
   }
-  button {
-    background-color: #f9f9f9;
-  }
 }
 
-/* Progress bar container */
-.progress-bar-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  overflow: hidden;
-  background: #ad4d4dcc;
-}
-
-
-
-/* Special styles ONLY for Landing Page */
-body.landing-page-body {
-  transition: background 0.5s ease-in-out;
-  display: flex;
+.Gradient{
+  position: absolute;
   justify-content: center;
 }
 
-/* Progress Bar for Landing Page */
-body.landing-page-body .progress-bar-container {
-  position: fixed;
+
+pre {
+  color: #21b05a;
+  font-size: 3em;
+  position: relative;
+}
+
+/* Header styling */
+.header1 {
+  position: fixed; /* Fixes header to top */
   top: 0;
-  left: 0;
+  left: -2% ;
+  right: 0;
   width: 100%;
-  height: 100%;
-  z-index: -1;
-  overflow: hidden;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.8); /* Slight transparency */
+  backdrop-filter: blur(5px); /* Nice blur effect */
+  z-index: 10; /* Ensures header stays above other content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-body.landing-page-body .progress-bar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(to right, #4a90e2, #50e3c2);
-  animation: progressBarMove 4s linear infinite;
+/* Navigation links container */
+.headerlink {
+  display: flex;
+  align-items: center;
 }
 
-@keyframes progressBarMove {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
+/* Navigation list styling */
+.headerlink ul {
+  list-style: none;
+  display: flex;
+  gap: 3rem; /* Space between nav items */
+  margin: 0;
+  padding: 0;
 }
 
-.ripple {
-  position: fixed;
-  width: 20px;
-  height: 20px;
-  background: radial-gradient(circle, rgba(80, 227, 194, 0.4) 0%, rgba(74, 144, 226, 0) 70%);
-  border-radius: 50%;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  transition: opacity 1s, transform 1s;
-  mix-blend-mode: difference;
-  z-index: 9998;
+/* Individual nav items */
+.headerlink li {
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
-.feather {
-  position: fixed;
-  width: 10px;
-  height: 10px;
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 50%;
-  pointer-events: none;
+.headerlink li:hover {
+  color: #40ffaa; /* Matches your gradient theme */
+}
+
+/* Content area - adds padding to prevent overlap with fixed header */
+.gradient {
+  padding-top: 80px; /* Adjust based on your header height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Button styling (optional enhancement) */
+.linkbutton {
+  margin-top: 1rem;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  background: linear-gradient(45deg, #4079ff, #40ffaa);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.linkbutton:hover {
+  transform: scale(1.05);
+}
+
+span{
+  font-size: 45px;
+  font-family: "Moon Dance", serif;
+}
+
+.ji{
+  font-size: 45px;
+}
+
+.m13{
   opacity: 0;
-  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
 }
-
