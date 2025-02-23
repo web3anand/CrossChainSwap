@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { Button } from "../components/ui/button";
-import Threads from "../components/ui/elements/threads";
+import Threads from "../components/ui/elements/Threads";
 import GradientText from "../components/ui/elements/GradientText";
 import "../index.css"; 
 
@@ -12,7 +12,7 @@ export default function LandingPage() {
   const navigate = useNavigate();
 
   return (
-    <div className="m13">
+    <div className="m10">
       {/* Threads Background */}
       <div
         style={{
@@ -21,17 +21,13 @@ export default function LandingPage() {
           position: "absolute",
           top: 0,
           left: 0,
-          zIndex: -1,
-    
+          zIndex: -2,
         }}
       >
         <Threads amplitude={1} distance={0} enableMouseInteraction={true} />
       </div>
 
       <header className="header1">
-        <div className="header2">
-          
-          </div>
         <div className="headerlink">
           <ul>
             <li onClick={() => navigate("/")}>Home</li>
@@ -51,7 +47,7 @@ export default function LandingPage() {
            colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
            animationSpeed={3}
            showBorder={false}
-           className="Gradinet"
+           className="Gradinet1"
          >
           Decentralized Cross-Chain Swap
         </GradientText>

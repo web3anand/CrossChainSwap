@@ -89,7 +89,7 @@ button:focus-visible {
   }
 }
 
-.Gradient{
+.Gradient1{
   position: absolute;
   justify-content: center;
 }
@@ -179,6 +179,6 @@ span{
   font-size: 45px;
 }
 
-.m13{
+.m14{
   opacity: 0;
 }

@@ -102,8 +102,6 @@ function App() {
       <InteractiveBackground />
       
       <header className="header1">
-        <div className="header2">
-          </div>
         <div className="headerlink">
           <nav>
           <ul>
@@ -118,10 +116,10 @@ function App() {
         </div>
       </header>
 
-      <div className='m13'>
+      <div className='m14'>
        <h1 > .    </h1>
       </div>
-      <div class = "m12" style={{ marginBottom: '15px' }}>
+      <div classname = "m12" style={{ marginBottom: '15px' }}>
         <h1></h1>
         <button
           onClick={toggleMode}
