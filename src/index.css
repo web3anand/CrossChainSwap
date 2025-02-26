@@ -170,7 +170,7 @@ pre {
   transform: scale(1.05);
 }
 
-span{
+.ji span{
   font-size: 45px;
   font-family: "Moon Dance", serif;
 }
@@ -181,4 +181,8 @@ span{
 
 .m14{
   opacity: 0;
+}
+
+.variable-proximity-demo{
+  font-size: 80px;
 }

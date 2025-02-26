@@ -31,11 +31,11 @@ export default function LandingPage() {
         <div className="headerlink">
           <ul>
             <li onClick={() => navigate("/")}>Home</li>
-            <li>Documentation</li>
-            <li onClick={() => navigate("/widget")}>Bridge</li>
+            <li onClick={() => navigate("/documentation")}>Documentation</li>
+            <li onClick={() => navigate("/bridge")}>Bridge</li>
             <li>Buy</li>
-            <li>Scan</li>
-            <li>News</li>
+            <li onClick={() => navigate("/scan")}>Scan</li>
+            <li onClick={() => navigate("/news")}>News</li>
           </ul>
         </div>
       </header>
@@ -57,7 +57,7 @@ export default function LandingPage() {
         </h2>
         <motion.div>
           <Button
-            onClick={() => navigate("/widget")}
+            onClick={() => navigate("/bridge")}
             className="linkbutton"
           >
             Enter Cross-Chain Swap

@@ -1,7 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
-import WidgetPage from "./pages/WidgetPage"; // your existing widget page
+import BridgePage from "./pages/BridgePage"; // your existing widget page
+import DocumentationPage from "./pages/DocumentationPage";
+import NewsPage from "./pages/NewsPage";
+import ScanPage from "./pages/ScanPage";
 import "./index.css";
 
 
@@ -10,7 +13,10 @@ export default function App() {
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/widget" element={<WidgetPage />} />
+        <Route path="/bridge" element={<BridgePage />} />
+        <Route path="/documentation" element={<DocumentationPage />} />
+        <Route path="/news" element={<NewsPage />} />
+        <Route path="/scan" element={<ScanPage />} />
       </Routes>
     </Router>
   );

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
 import { LiFiWidget } from '@lifi/widget';
 
 // Swap mode configuration
@@ -87,6 +88,7 @@ function InteractiveBackground() {
 }
 
 function App() {
+  const navigate = useNavigate();
   const [mode, setMode] = useState("swap");
 
   // Toggle between swap and refuel modes.
@@ -106,11 +108,11 @@ function App() {
           <nav>
           <ul>
             <li onClick={() => navigate("/")}>Home</li>
-            <li>Documentation</li>
-            <li onClick={() => navigate("/widget")}>Bridge</li>
+            <li onClick={() => navigate("/documentation")}>Documentation</li>
+            <li onClick={() => navigate("/bridge")}>Bridge</li>
             <li>Buy</li>
-            <li>Scan</li>
-            <li>News</li>
+            <li onClick={() => navigate("/scan")}>Scan</li>
+            <li onClick={() => navigate("/news")}>News</li>
           </ul>
           </nav>
         </div>
