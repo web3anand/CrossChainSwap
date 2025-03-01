@@ -19,7 +19,7 @@ export default function LandingPage() {
           width: "100%",
           height: "600px",
           position: "absolute",
-          top: 2,
+          top: 0,
           left: 0,
           zIndex: -2,
         }}
