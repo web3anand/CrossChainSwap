@@ -14,9 +14,13 @@
   "dependencies": {
     "@bigmi/react": "^0.1.1",
     "@lifi/widget": "^3.17.1",
+    "@moonpay/moonpay-js": "^0.6.6",
+    "@moonpay/moonpay-react": "^1.8.10",
     "@react-spring/web": "^9.7.5",
     "@react-three/drei": "^9.122.0",
     "@react-three/fiber": "^8.18.0",
+    "@reown/appkit": "^1.6.9",
+    "@reown/appkit-adapter-wagmi": "^1.6.9",
     "@solana/wallet-adapter-react": "^0.15.35",
     "@tailwindcss/vite": "^4.0.8",
     "@tanstack/react-query": "^5.66.9",
@@ -30,16 +34,21 @@
     "react-native-web": "^0.19.13",
     "react-router-dom": "^7.2.0",
     "react-tsparticles": "^2.12.2",
+    "react-tweet-embed": "^2.0.0",
     "tailwindcss": "^4.0.8",
     "three": "^0.173.0",
     "tsparticles": "^3.8.1",
+    "viem": "^2.23.6",
     "wagmi": "^2.14.11"
   },
   "devDependencies": {
+    "@esbuild-plugins/node-globals-polyfill": "^0.2.3",
+    "@esbuild-plugins/node-modules-polyfill": "^0.2.2",
     "@eslint/js": "^9.21.0",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react": "^4.3.4",
+    "buffer": "^6.0.3",
     "esbuild": "^0.24.2",
     "eslint": "^9.21.0",
     "eslint-plugin-react": "^7.37.4",
@@ -47,6 +56,7 @@
     "eslint-plugin-react-refresh": "^0.4.19",
     "gh-pages": "^6.3.0",
     "globals": "^15.15.0",
+    "process": "^0.11.10",
     "vite": "^6.1.1"
   },
   "resolutions": {

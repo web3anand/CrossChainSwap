@@ -18,8 +18,8 @@ export default function LandingPage() {
         style={{
           width: "100%",
           height: "600px",
-          position: "absolute",
-          top: 0,
+          position: "fixed",
+          top: "1%",
           left: 0,
           zIndex: -2,
         }}
@@ -33,7 +33,6 @@ export default function LandingPage() {
             <li onClick={() => navigate("/")}>Home</li>
             <li onClick={() => navigate("/documentation")}>Documentation</li>
             <li onClick={() => navigate("/bridge")}>Bridge</li>
-            <li>Buy</li>
             <li onClick={() => navigate("/scan")}>Scan</li>
             <li onClick={() => navigate("/news")}>News</li>
           </ul>

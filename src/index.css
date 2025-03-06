@@ -186,3 +186,11 @@ pre {
 .variable-proximity-demo{
   font-size: 80px;
 }
+
+.reow{
+  padding: 6px 20px;
+  background-color: #dce5ed;
+  color: #000000;
+  border-radius: 5px;
+  font-size: 15px;
+}

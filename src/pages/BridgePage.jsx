@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import { LiFiWidget } from '@lifi/widget';
+import { useAppKit } from '@reown/appkit/react'; 
+import { AppKitProvider } from '../providers/AppKitProvider'; 
+import "../index.css"; 
+
 
 // Swap mode configuration
 const swapConfig = {
@@ -87,9 +91,10 @@ function InteractiveBackground() {
   );
 }
 
-function App() {
+function App(){
   const navigate = useNavigate();
   const [mode, setMode] = useState("swap");
+  const { open } = useAppKit(); 
 
   // Toggle between swap and refuel modes.
   const toggleMode = () => {
@@ -110,9 +115,9 @@ function App() {
             <li onClick={() => navigate("/")}>Home</li>
             <li onClick={() => navigate("/documentation")}>Documentation</li>
             <li onClick={() => navigate("/bridge")}>Bridge</li>
-            <li>Buy</li>
             <li onClick={() => navigate("/scan")}>Scan</li>
             <li onClick={() => navigate("/news")}>News</li>
+            <button onClick={() => open({ view: 'FullLogin' })} className="reow"> Connect </button>
           </ul>
           </nav>
         </div>
@@ -146,4 +151,10 @@ function App() {
   );
 }
 
-export default App;
+export default function BridgePage() {
+  return (
+    <AppKitProvider>
+      <App/>
+    </AppKitProvider>
+  );
+}
