@@ -117,7 +117,7 @@ function App(){
             <li onClick={() => navigate("/bridge")}>Bridge</li>
             <li onClick={() => navigate("/scan")}>Scan</li>
             <li onClick={() => navigate("/news")}>News</li>
-            <button onClick={() => open({ view: 'FullLogin' })} className="reow"> Connect </button>
+            <button onClick={() => open()} className="reow"> Connect </button>
           </ul>
           </nav>
         </div>
