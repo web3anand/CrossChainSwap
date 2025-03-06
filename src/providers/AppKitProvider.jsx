@@ -16,7 +16,7 @@ const projectId = '4ec3224dde67e417b28278c891c49296'
 const metadata = {
   name: 'CrossChainSwap',
   description: 'Cross chain trasnfer with onramp',
-  url: 'https://daybot.vercel.in', // origin must match your domain & subdomain
+  url: 'https://daybot.vercel.app', // origin must match your domain & subdomain
   icons: ['https://assets.reown.com/reown-profile-pic.png']
 }
 
@@ -33,6 +33,8 @@ const wagmiAdapter = new WagmiAdapter({
 // 5. Create modal
 createAppKit({
   adapters: [wagmiAdapter],
+
+
   networks,
   projectId,
   metadata,
