@@ -26,7 +26,7 @@ function Buy1() {
       </header>
 
       
-       <div><button onClick={() => open()} className="reow"> BUY CRYPTO </button></div>
+       <div><button onClick={() => open({ view: 'OnRampProviders' })} className="reow"> BUY CRYPTO </button></div>
      
 
       </div>
