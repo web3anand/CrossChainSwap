@@ -39,8 +39,12 @@ createAppKit({
   projectId,
   metadata,
   features: {
-    analytics: true // Optional - defaults to your Cloud configuration
-  }
+    analytics: true ,
+    email: true,
+    socials: ['google', 'x', 'github', 'discord', 'apple', 'facebook', 'farcaster'],
+    emailShowWallets: true,
+  },
+  allWallets: 'SHOW', // default to SHOW
 })
 
 export function AppKitProvider({ children }) {

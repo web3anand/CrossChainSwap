@@ -1,12 +1,14 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useRef } from 'react';
-import VariableProximity from "../components/ui/elements/VariableProximity";
+import { useAppKit } from '@reown/appkit/react'; 
+import { AppKitProvider } from '../providers/AppKitProvider'; 
 import "../index.css"; 
 
-export default function DocumentationPage() {
-    const navigate = useNavigate();
-    const containerRef = useRef(null);
+function Buy1() {
+  const navigate = useNavigate();
+  const { open } = useAppKit(); 
+  const containerRef = useRef(null);
     return (
       <div>
 
@@ -22,22 +24,19 @@ export default function DocumentationPage() {
           </ul>
         </div>
       </header>
-    
-      <div
-ref={containerRef}
-style={{position: 'relative'}}
->
-  <VariableProximity
-    label={'Documentation will be live soon ...'}
-    className={'variable-proximity-demo'}
-    fromFontVariationSettings="'wght' 400, 'opsz' 9"
-    toFontVariationSettings="'wght' 1000, 'opsz' 40"
-    containerRef={containerRef}
-    radius={150}
-    falloff='gaussian'
-  />
-</div>
+
+      
+       <div><button onClick={() => open()} className="reow"> BUY CRYPTO </button></div>
+     
 
       </div>
+    );
+  }
+
+  export default function buycontent(){
+    return (
+        <AppKitProvider>
+         <Buy1/>
+        </AppKitProvider>
     );
   }

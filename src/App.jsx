@@ -6,6 +6,7 @@ import DocumentationPage from "./pages/DocumentationPage";
 import NewsPage from "./pages/NewsPage";
 import ScanPage from "./pages/ScanPage";
 import "./index.css";
+import BuyPage from "./pages/BuyPage";
 
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/bridge" element={<BridgePage />} />
+        <Route path="/buy" element={<BuyPage />} />
         <Route path="/documentation" element={<DocumentationPage />} />
         <Route path="/news" element={<NewsPage />} />
         <Route path="/scan" element={<ScanPage />} />
