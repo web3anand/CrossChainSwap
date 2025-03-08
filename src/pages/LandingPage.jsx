@@ -57,7 +57,7 @@ export default function LandingPage() {
         <motion.div>
           <Button
             onClick={() => navigate("/bridge")}
-            className="linkbutton"
+            className="linkb"
           >
             Enter Cross-Chain Swap
           </Button>
