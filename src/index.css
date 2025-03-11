@@ -1,25 +1,19 @@
-
 :root {
   font-family: "Lexend", serif;
   line-height: 1.5;
   font-weight: 700;
-
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #000000;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; 
 }
 
-
-
 *:focus {
   outline: none !important;
 }
-
 
 a {
   font-weight: 500;
@@ -42,9 +36,8 @@ body {
 h1 {
   font-size: 4em;
   line-height: 1.1;
-  border-radius:10px ;
-  color: linear-gradient(to right, #eae1e27c, #ba1849b9)
-
+  border-radius: 10px;
+  color: linear-gradient(to right, #eae1e27c, #ba1849b9);
 }
 
 p {
@@ -52,11 +45,11 @@ p {
   font-size: 2em;
 }
 
-strong{
+strong {
   color: rgb(36, 35, 33);
   background-color: #dce5ed;
   border-radius: 5px;
-  padding: 0.1em ;
+  padding: 0.1em;
 }
 
 .linkb {
@@ -72,7 +65,6 @@ strong{
   transition: border-color 0.25s;
 }
 
-
 @media (prefers-color-scheme: light) {
   :root {
     color: #bbbbbb;
@@ -83,11 +75,10 @@ strong{
   }
 }
 
-.Gradient1{
+.Gradient1 {
   position: absolute;
   justify-content: center;
 }
-
 
 pre {
   color: #21b05a;
@@ -99,11 +90,11 @@ pre {
 .header1 {
   position: fixed; /* Fixes header to top */
   top: 0;
-  left: -2% ;
+  left: -2%;
   right: 0;
   width: 100%;
   padding: 1rem 2rem;
-  background: rgba(0, 0, 0, 0.8); /* Slight transparency */
+  background:linear-gradient(90deg,  #000000 , #000000, #000000); /* Slight transparency */
   backdrop-filter: blur(5px); /* Nice blur effect */
   z-index: 10; /* Ensures header stays above other content */
   display: flex;
@@ -164,27 +155,27 @@ pre {
   transform: scale(1.05);
 }
 
-.ji span{
+.ji span {
   font-size: 45px;
   font-family: "Moon Dance", serif;
 }
 
-.ji{
+.ji {
   font-size: 45px;
 }
 
-.m14{
+.m14 {
   opacity: 0;
 }
 
-.variable-proximity-demo{
+.variable-proximity-demo {
   font-size: 80px;
 }
 
-.reow{
+.reow {
   background-color: #0000003f;
   font-size: 26px;
-  padding: 6px 20px ;
+  padding: 6px 20px;
   border-radius: 30px;
   border-color: #898d9172;
   border-style: ridge;
@@ -192,18 +183,38 @@ pre {
   align-items: center;
 }
 
-.rio{
+.rio {
   color: #bbbbbb;
   font-size: 40px;
 }
 
-.rio span{
+.rio span {
   font-family: "Moon Dance", serif;
 }
 
-.arr{
+.arr {
   position: absolute;
   margin: 20px;
   top: 30%;
-  left: 24% ;
+  left: 24%;
+}
+
+/* --- Added Underline Cursor Effect for Header Navigation Items --- */
+.headerlink li {
+  position: relative;
+}
+
+.headerlink li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px; /* Adjust this value as needed */
+  width: 0;
+  height: 2px;
+  background-color: #40ffaa;
+  transition: width 0.3s ease;
+}
+
+.headerlink li:hover::after {
+  width: 100%;
 }

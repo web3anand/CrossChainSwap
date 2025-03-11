@@ -47,18 +47,24 @@ importers:
       '@tanstack/react-query':
         specifier: ^5.66.9
         version: 5.66.9(react@18.3.1)
+      animejs:
+        specifier: ^3.2.2
+        version: 3.2.2
       framer-motion:
         specifier: ^12.4.7
         version: 12.4.7(@emotion/is-prop-valid@1.3.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       jsrepo:
         specifier: ^1.39.2
-        version: 1.39.2(ws@7.5.10(bufferutil@4.0.9)(utf-8-validate@5.0.10))
+        version: 1.39.2(ws@8.18.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))
       matter-js:
         specifier: ^0.20.0
         version: 0.20.0
       ogl:
         specifier: ^1.0.11
         version: 1.0.11
+      postprocessing:
+        specifier: ^6.37.1
+        version: 6.37.1(three@0.173.0)
       react:
         specifier: 18.3.1
         version: 18.3.1
@@ -89,6 +95,9 @@ importers:
       tsparticles:
         specifier: ^3.8.1
         version: 3.8.1
+      vanta:
+        specifier: ^0.5.24
+        version: 0.5.24
       viem:
         specifier: ^2.23.6
         version: 2.23.6(bufferutil@4.0.9)(utf-8-validate@5.0.10)(zod@3.22.4)
@@ -2709,6 +2718,9 @@ packages:
       react: 18.3.1
       react-dom: '*'
 
+  animejs@3.2.2:
+    resolution: {integrity: sha512-Ao95qWLpDPXXM+WrmwcKbl6uNlC5tjnowlaRYtuVDHHoygjtIPfDUoK9NthrlZsQSKjZXlmji2TrBUAVbiH0LQ==}
+
   anser@1.4.10:
     resolution: {integrity: sha512-hCv9AqTQ8ycjpSd3upOJd7vFwW1JaoYQ7tpham03GJ1ca8/65rqn0RpaWpItOAd6ylW9wAw6luXYPJIyPFVOww==}
 
@@ -4945,6 +4957,11 @@ packages:
     resolution: {integrity: sha512-dle9A3yYxlBSrt8Fu+IpjGT8SY8hN0mlaA6GY8t0P5PjIOZemULz/E2Bnm/2dcUOena75OTNkHI76uZBNUUq3A==}
     engines: {node: ^10 || ^12 || >=14}
 
+  postprocessing@6.37.1:
+    resolution: {integrity: sha512-fZszlSB8j+PaxtS8g4qMxdj+ifzvoCPnbHSOjclTlr4mbhd6/huQqOViM6lhhPIrW2fiZc+IRcnReoKYvyMwNg==}
+    peerDependencies:
+      three: '>= 0.157.0 < 0.175.0'
+
   potpack@1.0.2:
     resolution: {integrity: sha512-choctRBIV9EMT9WGAZHn3V7t0Z2pMQyl0EZE6pFc/6ml3ssw7Dlf/oAOvFwjm1HVsqfQN8GfeFyJ+d8tRzqueQ==}
 
@@ -5949,6 +5966,9 @@ packages:
         optional: true
       react:
         optional: true
+
+  vanta@0.5.24:
+    resolution: {integrity: sha512-fvieEbHy1ZS23zrcX+topzqAgA4Uct1enngOEWLFBgs9TtOf6RDFOYatH7KSVdrABzQDMCQ5myQy+nTSZZwLzg==}
 
   varuint-bitcoin@2.0.0:
     resolution: {integrity: sha512-6QZbU/rHO2ZQYpWFDALCDSRsXbAs1VOEmXAxtbtjLtKuMJ/FQ8YbhfxlaiKv5nklci0M6lZtlZyxo9Q+qNnyog==}
@@ -10242,6 +10262,8 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
+  animejs@3.2.2: {}
+
   anser@1.4.10: {}
 
   ansi-align@3.0.1:
@@ -12090,7 +12112,7 @@ snapshots:
 
   jsonparse@1.3.1: {}
 
-  jsrepo@1.39.2(ws@7.5.10(bufferutil@4.0.9)(utf-8-validate@5.0.10)):
+  jsrepo@1.39.2(ws@8.18.0(bufferutil@4.0.9)(utf-8-validate@5.0.10)):
     dependencies:
       '@anthropic-ai/sdk': 0.36.3
       '@biomejs/js-api': 0.7.1(@biomejs/wasm-nodejs@1.9.4)
@@ -12111,7 +12133,7 @@ snapshots:
       node-fetch: 3.3.2
       octokit: 4.1.2
       ollama: 0.5.13
-      openai: 4.85.3(ws@7.5.10(bufferutil@4.0.9)(utf-8-validate@5.0.10))
+      openai: 4.85.3(ws@8.18.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))
       package-manager-detector: 0.2.9
       parse5: 7.2.1
       pathe: 2.0.3
@@ -12698,7 +12720,7 @@ snapshots:
       is-docker: 2.2.1
       is-wsl: 2.2.0
 
-  openai@4.85.3(ws@7.5.10(bufferutil@4.0.9)(utf-8-validate@5.0.10)):
+  openai@4.85.3(ws@8.18.0(bufferutil@4.0.9)(utf-8-validate@5.0.10)):
     dependencies:
       '@types/node': 18.19.76
       '@types/node-fetch': 2.6.12
@@ -12708,7 +12730,7 @@ snapshots:
       formdata-node: 4.4.1
       node-fetch: 2.7.0
     optionalDependencies:
-      ws: 7.5.10(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      ws: 8.18.0(bufferutil@4.0.9)(utf-8-validate@5.0.10)
     transitivePeerDependencies:
       - encoding
 
@@ -12859,6 +12881,10 @@ snapshots:
       nanoid: 3.3.8
       picocolors: 1.1.1
       source-map-js: 1.2.1
+
+  postprocessing@6.37.1(three@0.173.0):
+    dependencies:
+      three: 0.173.0
 
   potpack@1.0.2: {}
 
@@ -13925,6 +13951,8 @@ snapshots:
     optionalDependencies:
       '@types/react': 18.3.18
       react: 18.3.1
+
+  vanta@0.5.24: {}
 
   varuint-bitcoin@2.0.0:
     dependencies:
