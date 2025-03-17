@@ -5,7 +5,7 @@ import "../index.css";
 export default function NewsPage() {
   const navigate = useNavigate();
 
-  const manualTweets = ["1895512307008200878"];
+  const manualTweets = ["1780580787030721023"];
 
   useEffect(() => {
     const loadTwitterScript = () => {
@@ -61,7 +61,7 @@ export default function NewsPage() {
             style={{
               padding: "20px",
               border: "1px solid #444",
-              borderRadius: "15px",
+              borderRadius: "20px",
               width: "100%",
               maxWidth: "600px",
               transition: "transform 0.3s",

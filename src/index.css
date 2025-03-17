@@ -172,32 +172,6 @@ pre {
   font-size: 80px;
 }
 
-.reow {
-  background-color: #0000003f;
-  font-size: 26px;
-  padding: 6px 20px;
-  border-radius: 30px;
-  border-color: #898d9172;
-  border-style: ridge;
-  position: absolute;
-  align-items: center;
-}
-
-.rio {
-  color: #bbbbbb;
-  font-size: 40px;
-}
-
-.rio span {
-  font-family: "Moon Dance", serif;
-}
-
-.arr {
-  position: absolute;
-  margin: 20px;
-  top: 30%;
-  left: 24%;
-}
 
 /* --- Added Underline Cursor Effect for Header Navigation Items --- */
 .headerlink li {
@@ -217,4 +191,43 @@ pre {
 
 .headerlink li:hover::after {
   width: 100%;
+}
+
+.arr {
+  position: relative;
+  margin-top: 100px; /* Space below the fixed header */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 100px); /* Viewport height minus header */
+  padding: 20px;
+  text-align: center;
+}
+
+.reow {
+  background-color: #0000003f;
+  font-size: 26px;
+  padding: 10px 24px;
+  border-radius: 30px;
+  border-color: #898d9172;
+  border-style: ridge;
+  color: white;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.reow:hover {
+  transform: scale(1.05);
+}
+
+.rio {
+  color: #bbbbbb;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.rio span {
+  font-family: "Moon Dance", serif;
 }

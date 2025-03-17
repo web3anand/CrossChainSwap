@@ -28,7 +28,7 @@ function Buy1() {
         <div>
            <p className="rio"> Create your <span>on-chain Footprint</span> on Blockchain </p>
         </div>
-        <div>
+        <div className="uy">
            <button onClick={() => open({ view: 'OnRampProviders' })} className="reow">
            <ShinyText text="buy your fortune " disabled={false} speed={3} className='custom-class' />
            </button>
