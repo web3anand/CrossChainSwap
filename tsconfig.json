@@ -1,7 +1,0 @@
-{
-    "compilerOptions": {
-      // your existing options...
-    },
-    "include": ["src", "src/types"]
-  }
-  

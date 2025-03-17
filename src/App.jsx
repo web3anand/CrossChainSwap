@@ -4,7 +4,6 @@ import LandingPage from "./pages/LandingPage";
 import BridgePage from "./pages/BridgePage"; // your existing widget page
 import DocumentationPage from "./pages/DocumentationPage";
 import NewsPage from "./pages/NewsPage";
-import ScanPage from "./pages/ScanPage";
 import "./index.css";
 import BuyPage from "./pages/BuyPage";
 
@@ -18,7 +17,6 @@ export default function App() {
         <Route path="/buy" element={<BuyPage />} />
         <Route path="/documentation" element={<DocumentationPage />} />
         <Route path="/news" element={<NewsPage />} />
-        <Route path="/scan" element={<ScanPage />} />
       </Routes>
     </Router>
   );

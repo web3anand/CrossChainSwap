@@ -20,7 +20,6 @@ function Buy1() {
             <li onClick={() => navigate("/documentation")}>Documentation</li>
             <li onClick={() => navigate("/bridge")}>Bridge</li>
             <li onClick={() => navigate("/buy")}>Buy</li>
-            <li onClick={() => navigate("/scan")}>Scan</li>
             <li onClick={() => navigate("/news")}>News</li>
           </ul>
         </div>

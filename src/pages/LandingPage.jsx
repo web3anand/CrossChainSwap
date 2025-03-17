@@ -73,7 +73,6 @@ export default function LandingPage() {
             <li onClick={() => navigate("/")}>Home</li>
             <li onClick={() => navigate("/documentation")}>Documentation</li>
             <li onClick={() => navigate("/bridge")}>Bridge</li>
-            <li onClick={() => navigate("/scan")}>Scan</li>
             <li onClick={() => navigate("/news")}>News</li>
           </ul>
         </div>
