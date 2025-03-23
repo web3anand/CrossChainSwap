@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import DockHeader from "../components/DockHeader";
 import "../index.css";
 
 export default function NewsPage() {
@@ -25,18 +26,8 @@ export default function NewsPage() {
 
   return (
     <div>
-      {/* Navbar */}
-      <header className="header1">
-        <div className="headerlink">
-          <ul>
-            <li onClick={() => navigate("/")}>Home</li>
-            <li onClick={() => navigate("/documentation")}>Documentation</li>
-            <li onClick={() => navigate("/bridge")}>Bridge</li>
-            <li onClick={() => navigate("/buy")}>Buy</li>
-            <li onClick={() => navigate("/news")}>News</li>
-          </ul>
-        </div>
-      </header>
+      
+       <DockHeader/>
 
       {/* Space below navbar */}
       <div style={{ marginTop: "80px" }} />

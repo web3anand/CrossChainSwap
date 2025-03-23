@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useRef } from 'react';
 import VariableProximity from "../components/ui/elements/VariableProximity";
+import DockHeader from "../components/DockHeader";
 import "../index.css"; 
 
 export default function DocumentationPage() {
@@ -10,17 +11,7 @@ export default function DocumentationPage() {
     return (
       <div>
 
-<header className="header1">
-        <div className="headerlink">
-          <ul>
-            <li onClick={() => navigate("/")}>Home</li>
-            <li onClick={() => navigate("/documentation")}>Documentation</li>
-            <li onClick={() => navigate("/bridge")}>Bridge</li>
-            <li onClick={() => navigate("/buy")}>Buy</li>
-            <li onClick={() => navigate("/news")}>News</li>
-          </ul>
-        </div>
-      </header>
+       <DockHeader/>
     
       <div
 ref={containerRef}

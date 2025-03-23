@@ -86,57 +86,7 @@ pre {
   position: relative;
 }
 
-/* Header styling */
-.header1 {
-  position: fixed; /* Fixes header to top */
-  top: 0;
-  left: -2%;
-  right: 0;
-  width: 100%;
-  padding: 1rem 2rem;
-  background:linear-gradient(90deg,  #000000 , #000000, #000000); /* Slight transparency */
-  backdrop-filter: blur(5px); /* Nice blur effect */
-  z-index: 10; /* Ensures header stays above other content */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-/* Navigation links container */
-.headerlink {
-  display: flex;
-  align-items: center;
-}
-
-/* Navigation list styling */
-.headerlink ul {
-  list-style: none;
-  display: flex;
-  gap: 3rem; /* Space between nav items */
-  margin: 0;
-  padding: 0;
-}
-
-/* Individual nav items */
-.headerlink li {
-  color: white;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.headerlink li:hover {
-  color: #40ffaa; /* Matches your gradient theme */
-}
-
-/* Content area - adds padding to prevent overlap with fixed header */
-.gradient {
-  padding-top: 80px; /* Adjust based on your header height */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
 
 /* Button styling (optional enhancement) */
 .linkb {
@@ -231,3 +181,8 @@ pre {
 .rio span {
   font-family: "Moon Dance", serif;
 }
+
+.gradient {
+  color: #000000;
+}
+

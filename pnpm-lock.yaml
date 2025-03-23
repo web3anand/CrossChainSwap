@@ -56,6 +56,9 @@ importers:
       jsrepo:
         specifier: ^1.39.2
         version: 1.39.2(ws@8.18.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))
+      lucide-react:
+        specifier: ^0.483.0
+        version: 0.483.0(react@18.3.1)
       matter-js:
         specifier: ^0.20.0
         version: 0.20.0
@@ -86,6 +89,9 @@ importers:
       react-tweet-embed:
         specifier: ^2.0.0
         version: 2.0.0(react@18.3.1)
+      tailwind-variants:
+        specifier: ^1.0.0
+        version: 1.0.0(tailwindcss@4.0.8)
       tailwindcss:
         specifier: ^4.0.8
         version: 4.0.8
@@ -4461,6 +4467,11 @@ packages:
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
 
+  lucide-react@0.483.0:
+    resolution: {integrity: sha512-WldsY17Qb/T3VZdMnVQ9C3DDIP7h1ViDTHVdVGnLZcvHNg30zH/MTQ04RTORjexoGmpsXroiQXZ4QyR0kBy0FA==}
+    peerDependencies:
+      react: 18.3.1
+
   maath@0.10.8:
     resolution: {integrity: sha512-tRvbDF0Pgqz+9XUa4jjfgAQ8/aPKmQdWXilFu2tMy4GWj4NOsx99HlULO4IeREfbO3a0sA145DZYyvXPkybm0g==}
     peerDependencies:
@@ -5611,6 +5622,15 @@ packages:
   svelte@5.20.2:
     resolution: {integrity: sha512-aYXJreNUiyTob0QOzRZeBXZMGeFZDch6SrSRV8QTncZb6zj0O3BEdUzPpojuHQ1pTvk+KX7I6rZCXPUf8pTPxA==}
     engines: {node: '>=18'}
+
+  tailwind-merge@3.0.2:
+    resolution: {integrity: sha512-l7z+OYZ7mu3DTqrL88RiKrKIqO3NcpEO8V/Od04bNpvk0kiIFndGEoqfuzvj4yuhRkHKjRkII2z+KS2HfPcSxw==}
+
+  tailwind-variants@1.0.0:
+    resolution: {integrity: sha512-2WSbv4ulEEyuBKomOunut65D8UZwxrHoRfYnxGcQNnHqlSCp2+B7Yz2W+yrNDrxRodOXtGD/1oCcKGNBnUqMqA==}
+    engines: {node: '>=16.x', pnpm: '>=7.x'}
+    peerDependencies:
+      tailwindcss: '*'
 
   tailwindcss@4.0.8:
     resolution: {integrity: sha512-Me7N5CKR+D2A1xdWA5t5+kjjT7bwnxZOE6/yDI/ixJdJokszsn2n++mdU5yJwrsTpqFX2B9ZNMBJDwcqk9C9lw==}
@@ -12305,6 +12325,10 @@ snapshots:
     dependencies:
       yallist: 3.1.1
 
+  lucide-react@0.483.0(react@18.3.1):
+    dependencies:
+      react: 18.3.1
+
   maath@0.10.8(@types/three@0.173.0)(three@0.173.0):
     dependencies:
       '@types/three': 0.173.0
@@ -13670,6 +13694,13 @@ snapshots:
       locate-character: 3.0.0
       magic-string: 0.30.17
       zimmerframe: 1.1.2
+
+  tailwind-merge@3.0.2: {}
+
+  tailwind-variants@1.0.0(tailwindcss@4.0.8):
+    dependencies:
+      tailwind-merge: 3.0.2
+      tailwindcss: 4.0.8
 
   tailwindcss@4.0.8: {}
 

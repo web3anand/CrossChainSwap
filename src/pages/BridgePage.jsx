@@ -4,6 +4,7 @@ import { LiFiWidget } from '@lifi/widget';
 import { useAppKit } from '@reown/appkit/react'; 
 import { AppKitProvider } from '../providers/AppKitProvider'; 
 import "../index.css"; 
+import DockHeader from '../components/DockHeader';
 
 
 // Swap mode configuration
@@ -108,19 +109,7 @@ function App(){
       {/* Interactive background */}
       <InteractiveBackground />
       
-      <header className="header1">
-        <div className="headerlink">
-          <nav>
-          <ul>
-            <li onClick={() => navigate("/")}>Home</li>
-            <li onClick={() => navigate("/documentation")}>Documentation</li>
-            <li onClick={() => navigate("/bridge")}>Bridge</li>
-            <li onClick={() => navigate("/buy")}>Buy</li>
-            <li onClick={() => navigate("/news")}>News</li>
-          </ul>
-          </nav>
-        </div>
-      </header>
+      <DockHeader/>
 
       <div className='m14'>
        <h1 > .    </h1>
