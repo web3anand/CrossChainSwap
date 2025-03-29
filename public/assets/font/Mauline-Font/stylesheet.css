@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Mauline';
+    src: url('Mauline-Regular.woff2') format('woff2'),
+        url('Mauline-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

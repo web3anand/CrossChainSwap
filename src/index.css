@@ -3,12 +3,12 @@
   line-height: 1.5;
   font-weight: 700;
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: rgba(0, 0, 0, 0.87);
   background-color: #000000;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; 
+  -moz-osx-font-smoothing: grayscale;
 }
 
 *:focus {
@@ -27,10 +27,10 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  justify-content: center;  /* Centers content horizontally */
-  align-items: center;      /* Centers content vertically */
-  height: 100vh;            /* Full viewport height */
-  width: 100vw;             /* Full viewport width */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
 }
 
 h1 {
@@ -60,7 +60,7 @@ strong {
   color: #122b37;
   font-weight: 500;
   font-family: inherit;
-  background-color: #f4f6f9;
+  background-color: #070808;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -71,14 +71,11 @@ strong {
     background-color: #000000;
   }
   a:hover {
-    color: #747bff;
+    color: #abacc6;
   }
 }
 
-.Gradient1 {
-  position: absolute;
-  justify-content: center;
-}
+
 
 pre {
   color: #21b05a;
@@ -86,17 +83,15 @@ pre {
   position: relative;
 }
 
-
-
 /* Button styling (optional enhancement) */
 .linkb {
   margin-top: 1rem;
   padding: 0.8rem 2rem;
   font-size: 1.1rem;
-  background: linear-gradient(45deg, #4079ff, #40ffaa);
+  background: linear-gradient(45deg, #5ca739, #40ffaa);
   border: none;
-  border-radius: 30px;
-  color: white;
+  border-radius: 10px;
+  color: rgb(26, 24, 24);
   cursor: pointer;
   transition: transform 0.3s ease;
 }
@@ -121,7 +116,6 @@ pre {
 .variable-proximity-demo {
   font-size: 80px;
 }
-
 
 /* --- Added Underline Cursor Effect for Header Navigation Items --- */
 .headerlink li {
@@ -186,3 +180,64 @@ pre {
   color: #000000;
 }
 
+/* --- LANDING PAGE STYLES WITH BACKGROUND VIDEO (Iridescence Removed) --- */
+.landing-container {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -4;
+}
+
+.blur-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(30px);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.landing-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding-top: 20vh;
+}
+
+.landing-content h1 {
+  font-size: 4em;
+  line-height: 1.1;
+  color: #c6bcbc;
+ 
+}
+
+.landing-content h2 {
+  font-size: 2em;
+  color: #bdb5b5;
+}
+
+.ji span {
+  font-size: 45px;
+  font-family: "Moon Dance", serif;
+}
+
+.ji {
+  font-size: 45px;
+}

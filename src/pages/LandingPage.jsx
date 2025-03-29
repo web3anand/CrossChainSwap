@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { Button } from "../components/ui/button";
-import Iridescence from "../components/backgrounds/Iridescence";
 import DockHeader from "../components/DockHeader";
 import "../index.css";
 
@@ -10,56 +9,26 @@ export default function LandingPage() {
   const navigate = useNavigate();
 
   return (
-    <div
-      style={{
-        position: "relative",
-        overflow: "hidden",
-        minHeight: "100vh",
-        width: "100vw",
-        margin: 0,
-        padding: 0,
-      }}
-    >
-      {/* Iridescence background */}
-      <div style={{ position: "absolute", inset: 0, zIndex: -3 }}>
-        <Iridescence
-          color={[1, 1, 1]}
-          mouseReact={false}
-          amplitude={0.1}
-          speed={1.0}
-        />
-      </div>
+    <div className="landing-container">
+      {/* Background Video */}
+      <video autoPlay loop muted playsInline className="background-video">
+        <source src="/videos/background.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+     
 
       {/* Full-page blur overlay */}
-      <div
-        style={{
-          position: "absolute",
-          inset: 0,
-          zIndex: -2,
-          backdropFilter: "blur(30px)",
-          WebkitBackdropFilter: "blur(30px)",
-          background: "rgba(255, 255, 255, 0.02)", // optional slight tint
-        }}
-      />
+      <div className="blur-overlay" />
 
       <DockHeader />
 
       {/* Content */}
-      <div
-        className="gradient"
-        style={{
-          textAlign: "center",
-          paddingTop: "20vh",
-        }}
-      >
-        <h1>
-          
-            Decentralized Cross-Chain Swap
-          
-        </h1>
+      <div className="landing-content">
+        <h1>Decentralized Cross-Chain Swap</h1>
 
         <h2 className="ji">
-          Seemless Transaction <span>across</span> Blockchain
+          Seamless Transactions <span>across</span> Blockchain
         </h2>
 
         <motion.div>

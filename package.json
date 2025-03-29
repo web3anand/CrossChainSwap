@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@bigmi/react": "^0.1.1",
+    "@lifi/sdk": "^3.6.2",
     "@lifi/widget": "^3.17.1",
     "@moonpay/moonpay-js": "^0.6.6",
     "@moonpay/moonpay-react": "^1.8.10",

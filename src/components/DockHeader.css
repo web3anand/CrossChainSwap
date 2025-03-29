@@ -8,19 +8,19 @@
   pointer-events: none;
 }
 
-/* Extra glow background */
+/* Golden glow effect */
 .dock-wrapper::before {
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 140%;
-  height: 140%;
-  background: radial-gradient(circle at center, #00ffc8 0%, #000 80%);
-  filter: blur(40px);
-  opacity: 0.15;
-  z-index: -1;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(circle at center, rgba(255, 215, 0, 0.4) 0%, rgba(0, 0, 0, 0) 80%);
+  filter: blur(50px);
+  opacity: 0.2;
+  z-index: -2;
   border-radius: 9999px;
 }
 
@@ -32,61 +32,47 @@
   gap: 24px;
   background: rgba(0, 0, 0, 0.959);
   border-radius: 9999px;
-  padding: 12px 30px;
+  padding: 12px 50px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(12px);
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-/* When showing — subtle scale & clarity */
+/* Show/Hide animation */
 .dock-wrapper.show .dock-container {
   transform: scale(1);
   filter: blur(0px);
 }
 
-/* When hiding — scale down & blur */
 .dock-wrapper.hide .dock-container {
   transform: scale(0.95);
   filter: blur(3px);
 }
 
-/* Scroll hide */
 .dock-wrapper.hide {
   transform: translateX(-50%) translateY(-80px);
   opacity: 0;
 }
 
-/* Scroll show */
 .dock-wrapper.show {
   transform: translateX(-50%) translateY(0);
   opacity: 1;
 }
 
-
-/* Highlight active page */
+/* Active link highlight */
 .dock-links .active {
-  color: #00ffc8;
+  color: #d5d73ecb; /* Golden active link */
   font-weight: 600;
 }
 
 .dock-links {
   display: flex;
   align-items: center;
-  gap: 50px; /* 👈 Controls spacing between the nav spans */
+  gap: 50px;
 }
 
-/* Logo */
-.dock-logo {
-  font-weight: 700;
-  font-size: 1.3rem;
-  color: #00ffc8;
-  cursor: pointer;
-  transition: color 0.3s ease;
-  margin-right: 24px; /* Optional: adds spacing between logo and links */
-}
-
-/* Nav links */
+/* Navigation links */
 .dock-links span {
   color: #ccc;
   cursor: pointer;
@@ -98,10 +84,4 @@
 .dock-links span:hover {
   color: #ffffff;
   transform: translateY(-2px);
-}
-
-/* Highlight active page */
-.dock-links .active {
-  color: #00ffc8;
-  font-weight: 600;
 }

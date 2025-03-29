@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
 import "./DockHeader.css";
 
 export default function DockHeader() {
@@ -11,13 +13,7 @@ export default function DockHeader() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-
-      if (currentScrollY > lastScrollY && currentScrollY > 50) {
-        setVisible(false);
-      } else {
-        setVisible(true);
-      }
-
+      setVisible(currentScrollY <= lastScrollY || currentScrollY < 50);
       setLastScrollY(currentScrollY);
     };
 
@@ -27,10 +23,39 @@ export default function DockHeader() {
 
   const isActive = (path) => location.pathname === path;
 
+  // Initialize tsParticles
+  const particlesInit = useCallback(async (engine) => {
+    await loadFull(engine);
+  }, []);
+
   return (
     <div className={`dock-wrapper ${visible ? "show" : "hide"}`}>
+      {/* Golden Particles Effect */}
+      <Particles
+        id="golden-dust"
+        init={particlesInit}
+        options={{
+          fullScreen: { enable: false },
+          particles: {
+            number: { value: 30 },
+            color: { value: "#FFD700" }, // Gold particles
+            shape: { type: "circle" },
+            opacity: { value: 0.8, random: true },
+            size: { value: 3, random: true },
+            move: { speed: 1, direction: "top", outMode: "out" },
+          },
+        }}
+        style={{
+          position: "absolute",
+          top: 0,
+          width: "100%",
+          height: "100px",
+          zIndex: -1, // Behind navbar
+          pointerEvents: "none",
+        }}
+      />
+
       <div className="dock-container">
-       
         <div className="dock-links">
           <span className={isActive("/") ? "active" : ""} onClick={() => navigate("/")}>
             Main
@@ -43,9 +68,6 @@ export default function DockHeader() {
           </span>
           <span className={isActive("/buy") ? "active" : ""} onClick={() => navigate("/buy")}>
             Buy
-          </span>
-          <span className={isActive("/news") ? "active" : ""} onClick={() => navigate("/news")}>
-            News
           </span>
         </div>
       </div>

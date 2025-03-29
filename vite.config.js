@@ -16,6 +16,8 @@ export default defineConfig({
     }
   },
   optimizeDeps: {
+  
+      include: ['@reown/appkit-react'],
     esbuildOptions: {
       // Enable esbuild polyfill plugins
       plugins: [
