@@ -63,11 +63,14 @@ export default function DockHeader() {
           <span className={isActive("/bridge") ? "active" : ""} onClick={() => navigate("/bridge")}>
             Bridge
           </span>
-          <span className={isActive("/documentation") ? "active" : ""} onClick={() => navigate("/documentation")}>
-            Documentation
+          <span className={isActive("/support") ? "active" : ""} onClick={() => navigate("/support")}>
+            Support
           </span>
           <span className={isActive("/buy") ? "active" : ""} onClick={() => navigate("/buy")}>
             Buy
+          </span>
+          <span className={isActive("/news") ? "active" : ""} onClick={() => navigate("/news")}>
+            News
           </span>
         </div>
       </div>

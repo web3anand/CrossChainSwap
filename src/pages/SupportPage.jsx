@@ -14,11 +14,12 @@ export default function DocumentationPage() {
        <DockHeader/>
     
       <div
-ref={containerRef}
-style={{position: 'relative'}}
+      className="fo"
+      ref={containerRef}
+      style={{position: 'relative'}}
 >
   <VariableProximity
-    label={'Documentation will be live soon ...'}
+    label={'SupportPage will be live soon ...'}
     className={'variable-proximity-demo'}
     fromFontVariationSettings="'wght' 400, 'opsz' 9"
     toFontVariationSettings="'wght' 1000, 'opsz' 40"

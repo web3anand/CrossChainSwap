@@ -6,8 +6,6 @@ import "../index.css";
 export default function NewsPage() {
   const navigate = useNavigate();
 
-  const manualTweets = ["1780580787030721023"];
-
   useEffect(() => {
     const loadTwitterScript = () => {
       if (window.twttr) {
@@ -26,53 +24,34 @@ export default function NewsPage() {
 
   return (
     <div>
-      
-       <DockHeader/>
+      <DockHeader />
 
       {/* Space below navbar */}
       <div style={{ marginTop: "80px" }} />
 
-      {/* Manual Tweet Embeds */}
+      {/* Embedded Twitter Timeline */}
       <div
         style={{
           width: "100vw",
-          maxWidth: "1200px",
-          margin: "40px auto",
-          padding: "20px",
+          maxWidth: "900px",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          gap: "40px",
+          background: "#f8f9fa",
+          borderRadius: "20px",
+          boxShadow: "0px 4px 10px rgba(0,0,0,0.1)",
         }}
       >
-        {manualTweets.map((id) => (
-          <div
-            key={id}
-            className="hover-container"
-            style={{
-              padding: "20px",
-              border: "1px solid #444",
-              borderRadius: "20px",
-              width: "100%",
-              maxWidth: "600px",
-              transition: "transform 0.3s",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              minHeight: "300px", // Optional: ensure space even before tweet loads
-            }}
-            onMouseEnter={(e) =>
-              (e.currentTarget.style.transform = "scale(1.03)")
-            }
-            onMouseLeave={(e) =>
-              (e.currentTarget.style.transform = "scale(1)")
-            }
-          >
-            <blockquote className="twitter-tweet" data-theme="dark">
-              <a href={`https://twitter.com/hashvalue/status/${id}`}></a>
-            </blockquote>
-          </div>
-        ))}
+
+        <a
+          className="twitter-timeline"
+          data-width="900"
+          data-height="600"
+          data-theme="dark"
+          href="https://twitter.com/hashvalue?ref_src=twsrc%5Etfw"
+        >
+          
+        </a>
       </div>
     </div>
   );

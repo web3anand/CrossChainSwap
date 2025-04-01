@@ -5,6 +5,7 @@ import { Button } from "../components/ui/button";
 import DockHeader from "../components/DockHeader";
 import "../index.css";
 
+
 export default function LandingPage() {
   const navigate = useNavigate();
 
@@ -37,6 +38,7 @@ export default function LandingPage() {
           </Button>
         </motion.div>
       </div>
+     
     </div>
   );
 }
